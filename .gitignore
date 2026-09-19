@@ -1,0 +1,23 @@
+# Dependencies & build output
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Local portable toolchains (node, git) and scratch files
+.tools/
+.tmp/
+
+# Stray Windows shell-cache folder
+%SystemDrive%/
+
+# Env / local overrides
+*.local
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

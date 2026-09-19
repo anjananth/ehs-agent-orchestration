@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-Content src\\\\components\\\\layout\\\\Badge.tsx -Raw\\) -replace 'text-surface-0 border', 'text-white border' -replace \"solid: 'bg-gov-fail text-fg-0 border-gov-fail'\", \"solid: 'bg-gov-fail text-white border-gov-fail'\" -replace \"solid: 'bg-surface-4 text-fg-0 border-surface-4'\", \"solid: 'bg-fg-1 text-white border-fg-1'\" -replace \"solid: 'bg-accent text-fg-0 border-accent'\", \"solid: 'bg-accent text-white border-accent'\" -replace \"solid: 'bg-model-granite text-fg-0 border-model-granite'\", \"solid: 'bg-model-granite text-white border-model-granite'\" | Set-Content -Encoding utf8 src\\\\components\\\\layout\\\\Badge.tsx; Select-String -Path src\\\\components\\\\layout\\\\Badge.tsx -Pattern \"solid:\" | ForEach-Object { $_.Line.Trim\\(\\) })",
+      "PowerShell($files = @\\('src\\\\components\\\\layout\\\\Header.tsx','src\\\\components\\\\layout\\\\PresenterControls.tsx','src\\\\components\\\\layout\\\\StepStrip.tsx'\\); foreach \\($f in $files\\) { $c = Get-Content $f -Raw; $c = $c -replace 'font-700', 'font-bold' -replace 'bg-accent text-fg-0', 'bg-accent text-white' -replace 'bg-gov-pending text-surface-0', 'bg-gov-pending text-white' -replace \"'border-accent/60 bg-accent/15 text-accent-hi'\", \"'border-accent/60 bg-accent/10 text-accent'\" -replace 'hover:bg-accent-hi', 'hover:bg-accent-lo'; Set-Content -Encoding utf8 $f $c }; Select-String -Path $files -Pattern 'text-fg-0|text-surface-0|accent-hi' | ForEach-Object { \"$\\($_.Filename\\):$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })",
+      "PowerShell(Select-String -Path src\\\\components\\\\canvas\\\\AgentNode.tsx -Pattern '!bg-surface-4|text-fg-2\\\\b' | Select-Object -First 3 | ForEach-Object { $_.Line.Trim\\(\\) })",
+      "PowerShell($s = \"C:\\\\Users\\\\a.ananth\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-a-ananth-Dev-ehs-agent-demo-prompt-pack\\\\f0a0e3cd-dcef-474a-9f23-e443ad791ef1\\\\scratchpad\\\\shot.ps1\"; & $s -Name ehs-step9 -Url \"http://localhost:5173/?step=8\" -Size \"1920,1080\" -Budget 8000 | Out-Null; & $s -Name ehs-step7 -Url \"http://localhost:5173/?step=6\" -Size \"1920,1080\" -Budget 8000 | Out-Null)",
+      "PowerShell(npm run build 2>&1 | Select-Object -Last 6; $s = \"C:\\\\Users\\\\a.ananth\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-a-ananth-Dev-ehs-agent-demo-prompt-pack\\\\f0a0e3cd-dcef-474a-9f23-e443ad791ef1\\\\scratchpad\\\\shot.ps1\"; & $s -Name ehs-clinical -Url \"http://localhost:5173/?step=10&view=clinical\" -Size \"1920,1080\" -Budget 8000 | Out-Null)",
+      "PowerShell(npx tsc -b; Write-Output \"tsc exit: $LASTEXITCODE\")",
+      "WebFetch(domain:developer.watson-orchestrate.ibm.com)",
+      "PowerShell(Set-Location C:\\\\Users\\\\a.ananth\\\\Dev\\\\ehs-agent-demo-prompt-pack; New-Item -ItemType Directory -Force orchestrate | Out-Null; Set-Location orchestrate; python -m venv .venv; .\\\\.venv\\\\Scripts\\\\python.exe -m pip install --upgrade pip --quiet 2>$null; .\\\\.venv\\\\Scripts\\\\python.exe -m pip install --upgrade ibm-watsonx-orchestrate 2>&1 | Select-Object -Last 8; Write-Output \"pip exit: $LASTEXITCODE\")",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\orchestrate.exe --version)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\orchestrate.exe --help 2>&1)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\orchestrate.exe env --help 2>&1)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\orchestrate.exe env add --help 2>&1)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\a.ananth\\AppData\\Local\\Temp\\claude\\c--Users-a-ananth-Dev-ehs-agent-demo-prompt-pack\\f0a0e3cd-dcef-474a-9f23-e443ad791ef1\\scratchpad"
+    ]
+  }
+}

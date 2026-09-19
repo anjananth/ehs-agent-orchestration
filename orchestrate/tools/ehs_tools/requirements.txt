@@ -1,0 +1,2 @@
+# Runtime dependencies for the Python tools (none beyond the ADK runtime for the mocked pass).
+# Add e.g. `fhirclient` / `requests` here when the real Cerner / Amal / Maitha calls are wired.
